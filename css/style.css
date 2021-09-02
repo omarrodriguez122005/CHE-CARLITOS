@@ -1,0 +1,239 @@
+/* CSS files add styling rulesto your content*/
+
+body {
+    margin: 0cm;
+    font-family: "Noto Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Fjalla One", sans-serif;
+  }
+  header {
+    padding: 20px 0 0 0;
+    background-color: hsl(60, 33%, 99%);
+}
+
+.navbar a {
+  color: skyblue;
+  text-decoration: none;
+}
+  .cover {
+    height: 300px;
+    background-image: url(https://cdn.glitch.com/686d35a2-2b6e-438b-ac4c-92ff63c16e5e%2F7dcff262-6592-4d2a-b622-96a0dbb6de76.image.png?v=1628807503255);
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+  }
+  .cover-small {
+    height: 200px;
+    background-blend-mode: normal;
+  }
+  .card {
+    border: 0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.86);
+  }
+  .card-title {
+    min-height: 3rem;
+  }
+  .card-text {
+    min-height: 10rem;
+  }
+  .product-stripe,
+  .slider {
+    overflow-x: scroll;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .stripe-container,
+  .slider-container {
+    display: flex;
+  }
+  .stripe-container .card {
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  .responsive-iframe {
+    position: relative;
+    padding-top: 56.25%;
+  }
+  .responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slider {
+    overflow-x: hidden;
+  }
+  .slider-container {
+    transform: translateX(0);
+    animation: slider 15s infinite;
+  }
+  .image-container {
+    width: 100%;
+    padding-top: 56.25%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+  }
+  h3 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+  }
+  textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+  }
+  #boton {
+    background: #31384A;
+    color: #fff;
+    padding: 20px;
+  }
+  #boton: hover {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 480px) {
+    form {
+      width: 100%;
+    }
+  }
+  
+  .redes {
+    height: 200px;
+    background-color: #84acbf;
+    padding: 30px;
+  }
+  .redes h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+  .sociales {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .sociales li {
+    display: inline-block;
+  }
+  .sociales a {
+    padding: 10px;
+  }
+  footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../img/background-footer.svg);
+    background-size: cover;
+  }
+  .container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  .box__footer .logo img{
+    width: 80px;
+    height: 60px;
+  }
+  .box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 15px;
+  }
+  .box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+  }
+  .box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+  }
+  .box__footer a:hover{
+    opacity: 0.8;
+  }
+  .box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+  }
+  .box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+  }
+  .box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+  }
+  @keyframes slider {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    95% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
