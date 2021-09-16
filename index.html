@@ -241,24 +241,15 @@
       </div>
     </section>
     <section>
-      <form action="">
+      <form action="enviar.php" method="post">
         <h3>
           CONTACTO
         </h3>
-        <div>
-          <label for="Nombre">Nombre</label>
-          <input type="text"id="Nombre">
-        </div>
-        <div>
-          <label for="Correo">Correo</label>
-          <input type="correo"id="Correo">
-        </div>
-        <textarea
-          name="mensaje"
-          placeholder="Escribe aquí tu mensaje"
-          required
-        ></textarea>
-        <input type="submit" onclick="enviarFormulario()" value="ENVIAR" id="boton"/>
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="correo" placeholder="Correo" required>
+        <input type="text" name="telefono" placeholder="Teléfono" required>
+        <textarea name="" id="mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
+        <input type="submit" value="ENVIAR" id="boton">
     </form>
     </section>
     <footer>
