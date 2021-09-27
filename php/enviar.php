@@ -1,29 +1,65 @@
 <?php
 
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$telefono = $_POST['telefono'];
-$mensaje = $_POST['mensaje'];
+$errorMSG = "";
 
-$header = 'From: ' . $correo . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+// NAME
+if (empty($_POST["nombre"])) {
+    $errorMSG = "Su nombre y apellido son requeridos ";
+} else {
+    $name = $_POST["nombre"];
+}
 
-$mensaje = "Este mensaje fue enviado por: " . $nombre . " \r\n";
-$mensaje .= "Su e-mail es: " . $correo . " \r\n";
-$mensaje .= "Teléfono de contacto: " . $telefono . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";
-$mensaje .= "Enviado el: " . date('d/m/Y', time());
+// EMAIL
+if (empty($_POST["email"])) {
+    $errorMSG .= "Su correo es requerido ";
+} else {
+    $email = $_POST["email"];
+}
 
-$para = 'omarfreefire994@gmail.com';
-$asunto = 'CONTACTO';
+// MSG Guest
+if (empty($_POST["telefono"])) {
+    $errorMSG .= "El teléfono es requerido ";
+} else {
+    $guest = $_POST["telefono"];
+}
 
-mail($para, $asunto, utf8_decode($mensaje), $header); 
 
-header('Location:index.html');
+// MESSAGE
+if (empty($_POST["mensaje"])) {
+    $errorMSG .= "El mensaje es requerido ";
+} else {
+    $message = $_POST["mensaje"];
+}
 
-echo "<script>alert('Correo enviado exitosamente') </script>";
-echo "<script> setTimeout(\"location.href='index.html'\",1000)</script>";
+
+$EmailTo = "orodriguezhcoarcaj@gmail.com";
+$Subject = "Nuevo mensaje para CHE CARLITOS ";
+
+$Body = "";
+$Body .= "Nombre: ";
+$Body .= $nombre;
+$Body .= "\n";
+$Body .= "Correo: ";
+$Body .= $email;
+$Body .= "\n";
+$Body .= "Teléfono: ";
+$Body .= $telefono;
+$Body .= "\n";
+$Body .= "Mensaje: ";
+$Body .= $mensaje;
+$Body .= "\n";
+
+
+$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+
+if ($success && $errorMSG == ""){
+   echo "Proceso exitoso";
+}else{
+    if($errorMSG == ""){
+        echo "Algo ha ido mal :(";
+    } else {
+        echo $errorMSG;
+    }
+}
 
 ?>
